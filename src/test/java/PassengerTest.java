@@ -8,9 +8,7 @@ public class PassengerTest {
     void setUp(){
         passenger = new Passenger("Ryan",
                 07123456111,
-                10,
-                "Paris",
-                1);
+                10);
     }
 
 }

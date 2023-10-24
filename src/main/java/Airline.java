@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Airline {
+public class Airline implements IFly{
 
     private String name;
     private ArrayList<Flight> flights;
@@ -10,19 +10,28 @@ public class Airline {
         flights = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
+    public void createFlight(String destination, long flightNumberID){
+        Flight flight = new Flight(destination, flightNumberID);
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public ArrayList<Flight> displayFlights() {
+        return this.flights;
     }
 
-    public ArrayList<Flight> getFlights() {
-        return flights;
+    @Override
+    public void book(Passenger passenger, Flight flight) {
+        flight.addPassenger(passenger);
     }
 
-    public void setFlights(ArrayList<Flight> flights) {
-        this.flights = flights;
+    @Override
+    public void remove(Passenger passenger, Flight flight) {
+        flight.removePassenger(passenger);
+    }
+
+    @Override
+    public void cancel(Flight flight) {
+        flights.remove(flight);
+        flight.cancelFlight();
     }
 }

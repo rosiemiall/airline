@@ -6,12 +6,25 @@ public class Flight {
     protected long flightNumberID;
     private ArrayList<Passenger> passengers;
 
-    public Flight(String destination, long flightNumberID, String name){
+    public Flight(String destination, long flightNumberID){
 
         this.destination = destination;
         this.flightNumberID = flightNumberID;
         passengers = new ArrayList<>();
     }
+
+    public void addPassenger(Passenger passenger){
+        passengers.add(passenger);
+    }
+    public void removePassenger(Passenger passenger){
+        passengers.remove(passenger);
+    }
+
+    public void cancelFlight(){
+        passengers.clear();
+    }
+
+
 
     public String getDestination() {
         return destination;

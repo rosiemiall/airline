@@ -10,6 +10,6 @@ public class AirlineTest {
         passenger = new Passenger("Ryan",
                 07123456111,
                 10);
-        flight1 = new Flight("Paris", 1, "Jet2");
+        flight1 = new Flight("Paris", 1);
     }
 }
