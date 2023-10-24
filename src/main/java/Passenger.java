@@ -1,17 +1,15 @@
 import java.util.HashMap;
 
-public class Passenger extends Flight {
+public class Passenger{
 
     private String name;
-    private HashMap contactInfo;
+    private long contactInfo;
     private long uniqueID;
 
     public Passenger(String name,
-                     HashMap contactInfo,
-                     long uniqueID,
-                     String destination,
-                     long flightNumberID){
-        super(destination, flightNumberID);
+                     long contactInfo,
+                     long uniqueID){
+
         this.name = name;
         this.contactInfo = contactInfo;
         this.uniqueID = uniqueID;
@@ -24,11 +22,11 @@ public class Passenger extends Flight {
         this.name = name;
     }
 
-    public HashMap getContactInfo() {
+    public long getContactInfo() {
         return contactInfo;
     }
 
-    public void setContactInfo(HashMap contactInfo) {
+    public void setContactInfo(long contactInfo) {
         this.contactInfo = contactInfo;
     }
 

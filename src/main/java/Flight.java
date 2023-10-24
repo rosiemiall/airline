@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 
-public abstract class Flight {
+public class Flight {
 
     protected String destination;
     protected long flightNumberID;
     private ArrayList<Passenger> passengers;
 
-    public Flight(String destination, long flightNumberID){
+    public Flight(String destination, long flightNumberID, String name){
+
         this.destination = destination;
         this.flightNumberID = flightNumberID;
         passengers = new ArrayList<>();
