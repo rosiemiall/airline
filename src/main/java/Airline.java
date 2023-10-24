@@ -10,9 +10,9 @@ public class Airline implements IFly{
         flights = new ArrayList<>();
     }
 
-    public void createFlight(String destination, long flightNumberID){
-        Flight flight = new Flight(destination, flightNumberID);
-    }
+//    public void createFlight(String destination, long flightNumberID){
+//        Flight flight = new Flight(destination, flightNumberID);
+//    }
 
     public void addFlight(Flight flight){
         this.flights.add(flight);
