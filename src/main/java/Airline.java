@@ -14,6 +14,10 @@ public class Airline implements IFly{
         Flight flight = new Flight(destination, flightNumberID);
     }
 
+    public void addFlight(Flight flight){
+        this.flights.add(flight);
+    }
+
     @Override
     public ArrayList<Flight> displayFlights() {
         return this.flights;
@@ -33,5 +37,21 @@ public class Airline implements IFly{
     public void cancel(Flight flight) {
         flights.remove(flight);
         flight.cancelFlight();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Flight> getFlights() {
+        return flights;
+    }
+
+    public void setFlights(ArrayList<Flight> flights) {
+        this.flights = flights;
     }
 }
